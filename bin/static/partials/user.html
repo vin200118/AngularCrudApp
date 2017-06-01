@@ -1,0 +1,31 @@
+<div>
+<form name="form1" ng-submit="submitForm(form1.$valid)" novalidate>
+
+<label>First Name</label><input type="text" name="firstName" ng-model="user.firstName" required/>
+
+<label>Last Name</label><input type="text" name="lastName" ng-model="user.lastName" required="required"/>
+<label>Gender</label><input type="text" name="gender" ng-model="user.gender" required="required"/>
+<input type="submit"></input>
+</form>
+
+		<table class="">
+                    <thead>
+                    <tr>
+                        <th>FIRST NAME</th>
+                        <th>LAST NAME</th>
+                        <th>GENDER</th>
+                       
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="u in departments">
+                      
+                        <td>{{u.firstName}}</td>
+                        <td>{{u.lastName}}</td>
+                        <td>{{u.gender}}</td>
+                        <td><input type="button" ng-click="deleteUser(u.id)" value="Delete"></input></td>
+                         <td><input type="button" ng-click="editUser(u.id)" value="Edit"></input></td>
+                    </tr>
+                    </tbody>
+                </table>     
+</div>
